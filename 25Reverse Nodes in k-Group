@@ -1,0 +1,112 @@
+/**
+ * Definition for singly-linked list.
+ * class ListNode {
+ *     val: number
+ *     next: ListNode | null
+ *     constructor(val?: number, next?: ListNode | null) {
+ *         this.val = (val===undefined ? 0 : val)
+ *         this.next = (next===undefined ? null : next)
+ *     }
+ * }
+ */
+
+function reverseKGroup(head: ListNode | null, k: number): ListNode | null {
+    if(k == 1 || head == null || head.next == null){
+        return head;
+    }   
+    let sentinel: ListNode | null = new ListNode(0, head)
+    let slow_index = sentinel;
+    let fast_index = slow_index.next;
+    let move = k;
+
+    let temp = head;
+    while(temp && move > 0){
+        temp = temp.next;
+        --move;
+    }
+
+    while(move == 0) {
+        move = k;
+        slow_index.next = reverselistnode(slow_index.next, k);
+        fast_index.next = temp;
+        slow_index = fast_index;
+        fast_index = fast_index.next;
+
+        while(temp && move > 0) {
+            temp = temp.next;
+            --move;
+        }
+    }
+    return sentinel.next;
+};
+function reverselistnode(head: ListNode | null, k: number): ListNode | null{
+    let prev = null;
+    let current = head;
+    let next = head;
+    while(k > 0) {
+        next = current.next;
+        current.next = prev;
+        prev = current;
+        current = next;
+        --k;
+    }
+    return prev;
+}; 
+
+/* function reverseKGroup(head: ListNode | null, k: number): ListNode | null {
+    let fast_index = head;
+    let slow_index = head;
+    let move = k - 1;
+
+    let temp = head;
+    
+    let special = true;
+    let result = head;
+
+    while (move > 0) {
+        fast_index = fast_index.next;
+        --move;
+    }
+    fast_index = fast_index.next;
+    move = 0;
+
+    while(move == 0){
+        temp = fast_index;
+        move = k - 1;
+        if(special){
+            result = reverselistnode(slow_index,k);
+            special = false;
+        }
+        else{
+            reverselistnode(slow_index,k);
+        }
+
+        while (fast_index && move > 0) {
+            fast_index = fast_index.next;
+            --move;
+        }
+
+
+        slow_index.next = fast_index;
+        slow_index = temp;
+        if(!fast_index) {
+            break;
+        }
+        fast_index = fast_index.next;
+
+    }
+    return result;
+};
+function reverselistnode(head: ListNode | null, k: number): ListNode | null{
+    let prev = null;
+    let current = head;
+    let next = head;
+    while(k > 0) {
+        next = current.next;
+        current.next = prev;
+        prev = current;
+        current = next;
+        --k;
+    }
+    return prev;
+}; */

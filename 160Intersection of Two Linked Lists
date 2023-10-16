@@ -1,0 +1,78 @@
+/**
+ * Definition for singly-linked list.
+ * class ListNode {
+ *     val: number
+ *     next: ListNode | null
+ *     constructor(val?: number, next?: ListNode | null) {
+ *         this.val = (val===undefined ? 0 : val)
+ *         this.next = (next===undefined ? null : next)
+ *     }
+ * }
+ */
+function getIntersectionNode(headA: ListNode | null, headB: ListNode | null): ListNode | null {
+    let indexA = headA;
+    let indexB = headB;
+    let flag = 0;
+
+    while (indexA != indexB && flag < 3){
+        indexA = indexA.next;
+        indexB = indexB.next;
+        if(indexA === null){
+            indexA = headB;
+            ++flag;
+        }
+        if(indexB === null){
+            indexB = headA;
+            ++flag;
+        }
+    }
+    if(flag > 2){
+        return null;
+    }
+    return indexA;
+};
+/**
+ * Definition for singly-linked list.
+ * class ListNode {
+ *     val: number
+ *     next: ListNode | null
+ *     constructor(val?: number, next?: ListNode | null) {
+ *         this.val = (val===undefined ? 0 : val)
+ *         this.next = (next===undefined ? null : next)
+ *     }
+ * }
+ */
+
+function getIntersectionNode(headA: ListNode | null, headB: ListNode | null): ListNode | null {
+    let indexA = headA;
+    let indexB = head.B;
+    let numA = 0;
+    let numB = 0;
+    
+    while(headA.next) {
+        headA = headA.next;
+        ++numA;
+    }
+    while(headB.next) {
+        headB = headB.next;
+        ++numB;
+    }
+    if(headA === headB) {
+        if(numA > numB){
+            for(let i = 0; i < numA - numB;++i){
+                indexA = indexA.next;
+            }
+        }
+        else{
+            for(let i = 0; i < numB - numA;++i){
+                indexB = indexB.next;
+            }
+        }
+        while(indexA !== indexB){
+            indexA = indexA.next;
+            indexB = indexB.next;
+        }
+        return indexA;
+    }
+    return null;
+};
