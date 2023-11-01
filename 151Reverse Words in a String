@@ -1,0 +1,26 @@
+# mine
+class Solution:
+    def reverseWords(self, s: str) -> str:
+        
+        stack = []
+        word = ""
+        res = ""
+        for char in s:
+            if char != ' ':
+                word += char
+            if char == ' ' and word:
+                stack.append(word)
+                word = ""
+
+        if word and word[0] != ' ':
+            stack.append(word)
+        while stack:
+            res = res + stack.pop() + " "
+        res = res[:-1]
+        return res
+
+        '''
+        word = str.split()
+        word.reverse()
+        return ' '.join(word)
+        '''
