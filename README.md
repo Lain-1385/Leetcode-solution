@@ -16,3 +16,8 @@
 ## p: Optional[Treenode] is a part of python type hint, p is name; Optional means p can be Treenode or None.
 ## --> bool: is a part of type hint, it means this function returns bool value.
 
+# 151 str medium O(n)
+## Very easy if using library function
+## my solution is using stack to reverse
+## another solution: two pointers. 1. remove extra spaces 2. reverse the whole str 3.reverse each word in str
+
