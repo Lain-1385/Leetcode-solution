@@ -1,3 +1,4 @@
+#Mine
 class Solution:
     def maxArea(self, height: List[int]) -> int:
         left = 0
@@ -29,6 +30,3 @@ class Solution:
 
                 right = temp
                 res = max(res, min(height[left], height[right]) * (right - left))
-            
-
-    
