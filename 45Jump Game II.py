@@ -1,10 +1,19 @@
 class Solution:
     def jump(self, nums: List[int]) -> int:
-        # TODO:optimal solution as it exceed limitted time when facing a long list nums
-        if len(nums) == 1:
-           return 0
-           
+        # dp[i] = dp[j] + 1 (0<= j <= i j is the first element which can jump to i)
+        n = len(nums)
+        if n == 1:
+            return 0;
 
-        for i in range(len(nums) - 1):
-           if i + nums[i] >= len(nums) - 1:
-               return self.jump(nums[:i + 1]) + 1
+        dp = [0] * n
+        dp[0] = 0
+        dp[1] = 1
+        j = 0
+
+        for i in range(2,n):
+            # find the first j to jump i
+            while j + nums[j] < i:
+                j += 1
+            dp[i] = dp[j] + 1
+
+        return dp[n - 1]
