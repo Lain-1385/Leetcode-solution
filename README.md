@@ -26,4 +26,16 @@ use two pointer to get water volumn. local optimal solution is to move the short
 
 ## 45 dp medium O(n)
 employ the proof by contradiction to prove dp[i] <= dp[i + 1],then get dp[i] = dp[j] + 1(j is the first which can jump to i)
-dp is not the same as recursion.
+dp is not the same as recursion, dp usually use a table or something to restore sub-question solution information to avoid repeated calculation.
+
+## 50 divide medium O(logn)
+divide into two situation n = odd or even, need to set n = -1 as an exit when n < 0.
+
+## 70 dp easy O(n)
+in fact, this is a Fibonacci sequence.
+
+## 121 array easy O(n)
+Too easy to explain anything.
+
+## 21 Listnode easy O(n)
+Too classical to explain anything.
