@@ -39,3 +39,9 @@ Too easy to explain anything.
 
 ## 21 Listnode easy O(n)
 Too classical to explain anything.
+
+## 125 string easy O(n)
+Too easy. The code would be short if we use regular expression and python reverse function.
+
+## 226 binaryTree easy O(n)
+Too classical.
