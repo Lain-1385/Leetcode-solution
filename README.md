@@ -38,10 +38,19 @@ in fact, this is a Fibonacci sequence.
 Too easy to explain anything.
 
 ## 21 Listnode easy O(n)
-Too classical to explain anything.
+Classic.should recite.
 
 ## 125 string easy O(n)
 Too easy. The code would be short if we use regular expression and python reverse function.
 
 ## 226 binaryTree easy O(n)
-Too classical.
+Classic.should recite.
+
+## 242 dict easy O(n)
+Use hash table like dict or set when position information is not crucial.
+
+## 704 binarysearch/two pointers easy O(n)
+Classic, recite.
+
+## 733 recursion easy O(n)
+Easy.

@@ -4,19 +4,13 @@
     // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
     "version": "0.2.0",
     "configurations": [
-        
-
         {
-            "type": "node",
+            "name": "Python: Current File",
+            "type": "python",
             "request": "launch",
-            "name": "Launch Program",
-            "skipFiles": [
-                "<node_internals>/**"
-            ],
-            "program": "${workspaceFolder}\\Spiral Matrix II59 copy.js",
-            "outFiles": [
-                "${workspaceFolder}/**/*.js"
-            ]
+            "program": "${file}",
+            "console": "integratedTerminal",
+            "justMyCode": true
         }
     ]
 }
