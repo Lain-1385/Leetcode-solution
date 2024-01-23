@@ -54,3 +54,9 @@ Classic, recite.
 
 ## 733 recursion easy O(n)
 Easy.
+
+## 235 BST medium O(logn)
+if two nodes are both smaller than root, search root's left.
+if two nodes are both bigger than root, search root's right.
+otherwise, return root. 
+
