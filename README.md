@@ -60,3 +60,9 @@ if two nodes are both smaller than root, search root's left.
 if two nodes are both bigger than root, search root's right.
 otherwise, return root. 
 
+## 110 Tree easy O(n)
+when node is unbalanced, let depth be -1, and stop in advance when left tree or right become unbalanced.
+in this case we just need one time traverse.
+
+## 232 stack easy O(n)
+divide two stacks into input and output, and only output become empty we need to pour all element of input stack into output stack.
