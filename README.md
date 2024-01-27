@@ -66,3 +66,6 @@ in this case we just need one time traverse.
 
 ## 232 stack easy O(n)
 divide two stacks into input and output, and only output become empty we need to pour all element of input stack into output stack.
+
+## 278 BinarySearch easy O(n)
+classical, two solution and be care about < or <=, mid or mid + 1 , return mid or left
