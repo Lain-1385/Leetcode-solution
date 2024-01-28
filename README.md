@@ -69,3 +69,9 @@ divide two stacks into input and output, and only output become empty we need to
 
 ## 278 BinarySearch easy O(n)
 classical, two solution and be care about < or <=, mid or mid + 1 , return mid or left
+
+## 383 string easy O(n)
+if an abnormal situation occurs during the process, should output False
+
+## 409 string easy o(n)
+dont need to iterate set or dict again.
