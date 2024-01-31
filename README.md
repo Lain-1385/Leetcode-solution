@@ -75,3 +75,7 @@ if an abnormal situation occurs during the process, should output False
 
 ## 409 string easy o(n)
 dont need to iterate set or dict again.
+
+## 169 array easy O(n)
+Sorting, hash map, Moore Voting.
+Moore Voting: The algorithm works on the basis of the assumption that the majority element occurs more than n/2 times in the array.This assumption guarantees that even if the count is reset to 0 by other elements, the majority element will eventually regain the lead.
