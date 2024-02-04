@@ -82,3 +82,17 @@ Moore Voting: The algorithm works on the basis of the assumption that the majori
 
 ## 67 binary easy O(n)
 carry = (a + b + carry) // 2, c = (a + b + carry) % 2
+
+## 543 binary easy O(n)
+integer is immutable, so u cant change its value in depth()
+Array is mutable, so u can change its value in depth()
+u can also use self. to record in the process of recursion.
+
+## 104 binary easy O(n)
+classic
+
+## 876 ListNode easy O(n)
+classic
+
+## 217 array easy O(n)
+use set.
