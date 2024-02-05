@@ -96,3 +96,6 @@ classic
 
 ## 217 array easy O(n)
 use set.
+
+## 13 string easy O(n)
+using hash table and iterate s, judge s[i] and s[i+1], add value or subtract value.
