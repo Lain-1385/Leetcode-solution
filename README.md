@@ -99,3 +99,6 @@ use set.
 
 ## 13 string easy O(n)
 using hash table and iterate s, judge s[i] and s[i+1], add value or subtract value.
+
+## 844 string easy O(n)
+stack.pop() when iterating '#', return stack.t == stack.s
