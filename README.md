@@ -102,3 +102,9 @@ using hash table and iterate s, judge s[i] and s[i+1], add value or subtract val
 
 ## 844 string easy O(n)
 stack.pop() when iterating '#', return stack.t == stack.s
+
+## 53 array medium O(n)
+DP: construct a subproblem -- find the maximum subsequence sum ending with the Nth element. e.g. for [-2,1,-3]
+s[1] = -2 s[2] = 1 s[3] = -2, we can find s[n+1] = max(s[n], 0) + nums[n]. then global result is max[s].
+
+greedy: use a current_sum to record local_maximum, when it becomes negative, it needs to inial as 0. use res to output the max current_sum.
