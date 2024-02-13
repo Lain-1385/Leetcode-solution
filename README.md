@@ -108,3 +108,6 @@ DP: construct a subproblem -- find the maximum subsequence sum ending with the N
 s[1] = -2 s[2] = 1 s[3] = -2, we can find s[n+1] = max(s[n], 0) + nums[n]. then global result is max[s].
 
 greedy: use a current_sum to record local_maximum, when it becomes negative, it needs to inial as 0. use res to output the max current_sum.
+
+## 57 array medium O(n)
+very complex, split it into 4 subquestion. see note in my code.

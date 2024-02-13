@@ -8,7 +8,7 @@ class Solution:
             if current_sum < 0:
                 current_sum = 0
         return res
-    
+     
 class Solution:
     def maxSubArray(self, nums: List[int]) -> int:
         dp = len(nums) * [0]
