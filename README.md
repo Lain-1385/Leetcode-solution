@@ -111,3 +111,6 @@ greedy: use a current_sum to record local_maximum, when it becomes negative, it 
 
 ## 57 array medium O(n)
 very complex, split it into 4 subquestion. see note in my code.
+
+## 542 dp medium O(mn)
+brush tiles twice. First, compute distance towards left and up. Second, compute distance towards right and down.
