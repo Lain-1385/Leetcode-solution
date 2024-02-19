@@ -17,6 +17,6 @@ class Solution:
                         temp = min(res[i+1][j] if i < m - 1 else 9999
                                 , res[i][j+1] if j < n - 1 else 9999
                                 ) + 1
-                        res[i][j] = temp
+                        res[i][j] = min(res[i][j], temp)
         return res
                         

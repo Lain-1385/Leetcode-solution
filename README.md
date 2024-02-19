@@ -114,3 +114,12 @@ very complex, split it into 4 subquestion. see note in my code.
 
 ## 542 dp medium O(mn)
 brush tiles twice. First, compute distance towards left and up. Second, compute distance towards right and down.
+
+## 973 array medium O(nlogk)
+logic is simple, we can use heap to make code more clear.
+
+## 3 hash medium O(n)
+use dict, add char and index into dict, when char is already in dict(meet repeated char), compute the index subtraction. return the max subtraction.
+
+## 102 BT medium O(n)
+queue implement BFS, record each node's level. when level updates, the res_array should add a new subarray. when level remains unchanged, only the last subarray in res updates.
