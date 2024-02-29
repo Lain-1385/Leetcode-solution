@@ -123,3 +123,20 @@ use dict, add char and index into dict, when char is already in dict(meet repeat
 
 ## 102 BT medium O(n)
 queue implement BFS, record each node's level. when level updates, the res_array should add a new subarray. when level remains unchanged, only the last subarray in res updates.
+
+## 207 topological sort medium O(n)
+defaultdict(list) is very useful, it can automatically add values into a value-list when key can be repeated.
+we use a indegree list to record each course's in-degree. For those whose indegree equals 0(need no pre-course), we add them into a queue to implement BFS. when we iterate a course, we should decrese its post-course by 1 and check its in-degree , append it into queue or not.
+DFS: use a list containing three state: -1 visiting 0 unvisited 1 visited, if meets -1, it indicates a loop is found.
+
+## 207 Trie medium
+Trie structure. The node is nested dictionary, the key is char and the value is {}. the end of the Trie should be marked, like use {'*'} as key. 
+
+## 238 array medium O(n)
+use prefix product and suffix product, the i-th target outpush should be prefix[i] * suffix[i]
+
+## 155 stack medium O(1)
+use a list to record the current min_value when execute pushing.
+
+## 98 BST medium O(n)
+use validate(node, min_val, max_val), update min_val, max_val in each iterations.
