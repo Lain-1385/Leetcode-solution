@@ -140,3 +140,9 @@ use a list to record the current min_value when execute pushing.
 
 ## 98 BST medium O(n)
 use validate(node, min_val, max_val), update min_val, max_val in each iterations.
+
+## 200 dfs medium O(mn)
+use a dfs function to convert all island connected to given point to water, call this funtion and count num_island in outer iterative when met with island.
+
+## 994 bfs medium O(mn)
+use BFS, append all rotten orange position into queue to initialize it.
