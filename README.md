@@ -146,3 +146,12 @@ use a dfs function to convert all island connected to given point to water, call
 
 ## 994 bfs medium O(mn)
 use BFS, append all rotten orange position into queue to initialize it.
+
+## 33 BS medium O(logn)
+should check if left nums is sorted or right nums is sorted. if left nums sorted, check target in left or not.
+
+## 4 BS hard O(logm+n)
+when A[i-1]<=B[j] and B[j-1]<=A[i], the left of total elements A[0...i-1] and B[0...j-1] are smaller than any elements in right A[i...len(A) - 1] and B[j...len(B) - 1]
+
+## 39 BFS medium O(n^2)
+only greater or equal to last added elements are permitted  "if i >= last_added"
