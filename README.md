@@ -110,7 +110,8 @@ s[1] = -2 s[2] = 1 s[3] = -2, we can find s[n+1] = max(s[n], 0) + nums[n]. then 
 greedy: use a current_sum to record local_maximum, when it becomes negative, it needs to inial as 0. use res to output the max current_sum.
 
 ## 57 array medium O(n)
-very complex, split it into 4 subquestion. see note in my code.
+~~very complex, split it into 4 subquestion. see note in my code.
+Too easy if we use 56method
 
 ## 542 dp medium O(mn)
 brush tiles twice. First, compute distance towards left and up. Second, compute distance towards right and down.
@@ -155,3 +156,9 @@ when A[i-1]<=B[j] and B[j-1]<=A[i], the left of total elements A[0...i-1] and B[
 
 ## 39 BFS medium O(n^2)
 only greater or equal to last added elements are permitted  "if i >= last_added"
+
+## 46 backtracking medium O(n!)
+use swap in the backtrack recursion function.
+
+## 56 array medium O(n)
+Too easy.
