@@ -162,3 +162,59 @@ use swap in the backtrack recursion function.
 
 ## 56 array medium O(n)
 Too easy.
+
+## 236 Tree medium O(n)
+use recursion. if left subtree contains no p or q(right subtree has two), return the LCA(lowest common ancestor) in right subtree. if right contains no p or q, return LCA in left subtree. if both subtree contains p or q, return root.
+
+## 981 BS medium O(logn)
+when loop ends, right is the max value which is smaller than target.
+
+## 721 graph medium
+first, use graph to denote the accounts information and relationship. then use dfs or union-find to travers and merge accounts.
+the key concept of union-find is to use a representative element to denote elements belonging to same class.
+
+## 75 array medium
+value 2 is placed at the end of array and end position --1, value 0 is place at the beginnning of array and start position++1, use swap and low,mid,high three pointers.
+
+## 139 dp medium O(n^2)
+dp[i] means if s[:i] can be segmented, dp[i] = dp[j] and s[j:i] in set (for any j < i).
+
+## 416 dp medium O(m*n)
+dp[i] means if i can be sum of subarray. We want dp[total sum / 2].
+the trick here: not update the dp[] one by one. 
+first: for one num, use reverse traverse to update dp[], it can avoid certain sum is used once.
+Second: Traverse all num in nums.
+
+## 8 str medium
+lstrip remove white space, then check the sign, and check the remains is digit or not and compute res.
+python we dont need to consider data type overflow.
+but in c++, we need compute the res and next char to avoid overflow. 
+
+## 54 matrix medium
+do turning when meet the seen node or the boundary of matrix.
+
+## 78 backtrack medium
+use general form back to add path into res.
+or use bitmanuplate method, use bit(interge)[2:] to get bits like 011101; 
+
+## 199 dfs medium
+always add the right leaf in the every depth to res.
+trick: use 'depth == len(res)' to replace use set seen[]
+
+## 5 dp medium fail
+DP method: initial dp matrix as n*n matrix,in which dp[i][j] represents if s[i:j + 1] is palindromic, then updates dp ckecking the palindromic of length 2, at last traverse length 3 or more situation.
+expand around center: choose a certain positon in str, and get the longest palindromic str around it(including odd and even situation), traverse all position in str.
+
+## 62 dp medium 
+initial dp[m][n], update dp[i][j] by checking its left or above nodes.
+
+## 105 BT medium
+Divide and conquer: use inorder and preorder to get right subtree and left subtree then do recursion to these two subtrees.
+in every recursion we should intial a Treenode and connect it to return Tree.
+
+## 11 Greedy medium
+always move the shorter lines until left line meets right line. outputs the maximum in this process.
+PS: use proof by contradiction to prove that it won't miss the maximum.
+
+## 17 backtrack medium
+typeical backtrack form.

@@ -12,7 +12,7 @@ class Solution:
             for i in nums:
                 if i not in cur_perm:
                     dfs.append(cur_perm + [i])
-            
+           
         return res
 
 # backtracking 
